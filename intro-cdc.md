@@ -12,6 +12,7 @@ layout: cover
 ---
 
 # Club de Ciencias
+## Presentando: miniBloq
 
 ---
 layout: center
