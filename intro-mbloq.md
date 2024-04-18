@@ -29,25 +29,34 @@ class: text-center
 <div v-click>
 Osea, es un programa para hacer programas, a partir de bloques!
 </div>
-<div v-click>
 
-<img src="/intro/eminem.jpg" class="mx-auto mt-lg"/>
+<img v-click v-motion v-motion-roll-left src="/intro/eminem.jpg" class="mx-auto mt-lg"/>
 
-</div>
 
 ---
 layout: center
 class: text-center
+clicks: 5
 ---
 
-<h1 v-click.hide> Nuestro entorno de trabajo</h1>
-<h1 v-after v-click.hide> Panel hardware</h1>
+<h1 v-click.hide="[1,5]"> Nuestro entorno de trabajo</h1>
 
-***
+<br/>
 
 <img src="/intro/minibloq.png"
   v-motion
-  :initial="{ x: 0 }"
-  :click-2="{ x: 200 }"
+  :initial="{ x: 0, y: 0, scale: 1, transition: {
+    duration: 600,
+    type: 'spring'
+  }}"
+  :click-1="{ x: 200, y: -50, scale: 1.25}"
+  :click-2="{ x: -400, y: -50, scale: 1.5}"
+  :click-3="{ x: 0, y: -50, scale: 1.25}"
+  :click-4="{ x: 600, y: 450, scale: 3}"
+  :click-5="{ x: 0, y: 0, scale: 1 }"
   :leave="{ x: 0 }"
   />
+
+---
+
+bye
